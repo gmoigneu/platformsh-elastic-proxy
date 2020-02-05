@@ -1,0 +1,28 @@
+name: search
+type: nodejs:10
+
+build:
+  flavor: none
+
+hooks:
+  build:
+    yarn
+
+relationships:
+  elasticsearch: 'elasticsearch:elasticsearch'
+
+web:
+  commands:
+    start: "PM2_HOME=/app/run pm2 start index.js --no-daemon"
+
+dependencies:
+  nodejs:
+    pm2: "^2.5.0"
+    yarn: "*"
+
+mounts:
+  run:
+    source: local
+    source_path: run
+
+disk: 256
