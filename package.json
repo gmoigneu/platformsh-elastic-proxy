@@ -21,7 +21,7 @@
     "body-parser": "^1.18.2",
     "btoa": "^1.1.2",
     "cors": "^2.8.5",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "http-proxy-middleware": "^0.17.4",
     "platformsh-config": "^2.2.5"
   }
